@@ -115,7 +115,7 @@ function getWelcomeResponse(response) {
     };
     var repromptOutput = {
         speech: repromptText,
-        type: AlexaSkill.speechOutputType.SSML
+        type: AlexaSkill.speechOutputType.PLAIN_TEXT
     };
     response.ask(speechOutput, repromptOutput);
 }
@@ -136,7 +136,7 @@ function helpTheUser(intent, session, response) {
     };
     var repromptOutput = {
         speech: repromptText,
-        type: AlexaSkill.speechOutputType.SSML
+        type: AlexaSkill.speechOutputType.PLAIN_TEXT
     };
     response.ask(speechOutput, repromptOutput);
 }
