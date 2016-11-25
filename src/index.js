@@ -92,13 +92,7 @@ function getFestivalDate(intent, session, response) {
 }
 
 function getUpcomingFestivals(intent, session, response) {
-    /*var speechText = "GetUpcomingFestivals invoked.";
-
-    var speechOutput = {
-        speech: speechText,
-        type: AlexaSkill.speechOutputType.PLAIN_TEXT
-    };
-    response.tell(speechOutput);*/
+    
     performUpcomingFestivalOperation(response);
 }
 
@@ -107,7 +101,8 @@ function getUpcomingFestivals(intent, session, response) {
  */
 function getWelcomeResponse(response) {
     // If we wanted to initialize the session to have some attributes we could add those here.
-    var speechText = "Welcome to Indian Fest. Your calender for indian festivals. I remember all the indian festivals whole year.";
+    var speechText = "Welcome to Indian Fest. Your calender for indian festivals. I remember all the indian festivals whole year. You can ask," +
+        " what are the upcoming festivals.";
     var repromptText = "Just ask, which are upcoming festivals.";
    var speechOutput = {
         speech: speechText,
