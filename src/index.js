@@ -180,7 +180,7 @@ async.whilst(
                     var same_day_festivals_name = festivals[j].name.split(",");
                     var festival_date = festivals[j].date;
                     //console.log("Date:" + festival_date + " Day: " + day);
-                    if(festival_date > day) {
+                    if(( i == month && festival_date > day) || ( i != month)) {
                         for(var k = 0; k < same_day_festivals_name.length; k++) {
                             //console.log("Found:" + same_day_festivals_name[k]);
                             if( supported_festivals_string.indexOf(same_day_festivals_name[k].trim()) !== -1) {
